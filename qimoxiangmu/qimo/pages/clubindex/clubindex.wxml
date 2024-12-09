@@ -1,0 +1,71 @@
+<!--pages/clubindex/clubindex.wxml-->
+<scroll-view>
+  <!-- 背景图 -->
+  <view class="clubBackground">
+    <image src="{{imgUrl}}" mode="aspectFill" />
+  </view>
+  <!-- 社团名称 -->
+  <text class="clubName">{{clubName}}</text>
+  <!-- 社团介绍 -->
+  <view class="describes">
+    <text class="describes_tltle">社团介绍</text>
+    <text class="describes_t">{{describes}}</text>
+  </view>
+
+  <!-- 社团成员 -->
+  <view class="member">
+    <view class="member_top">
+      <text class="member_title">社团成员</text>
+      <text class="member_more" bindtap="toMember">查看更多</text>
+    </view>
+    <!-- 滚动条 -->
+    <scroll-view scroll-x>
+      <view class="member_h">
+        <view wx:for="{{memberList}}" wx:key="index">
+          <view class="member_one">
+            <image src="{{item.headImg}}" mode="" />
+            <view class="member_text">
+              <text class="member_name">{{item.name}}</text>
+              <text class="member_posts">{{item.posts}}</text>
+              <!-- <text class="member_sign">{{item.signature}}</text> -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 社团活动 -->
+  <view class="activity">
+    <view class="activity_top">
+      <text class="activity_title">社团活动</text>
+      <text bindtap="toAddAct" class="activity_more">发布活动</text>
+    </view>
+    <view style="margin-top:10px;text-align: center;" wx:if="{{!clubActivityList}}">暂无</view>
+    <view bindtap="toActivity" data-id="{{item.id}}" class="activity-item" wx:for="{{clubActivityList}}" wx:key="id">
+      <!-- 图片 -->
+      <view class="thumb">
+        <image src="{{item.images}}" mode="aspectFill" />
+      </view>
+      <!-- 具体信息 -->
+      <view class="info">
+        <text class="activity-title">{{item.name}}</text>
+        <!-- 处理两个图标 -->
+        <span class="first">
+          <image class="activity-icon" src="http://ru857uat2.hn-bkt.clouddn.com/images/tab/time.png" mode=""></image>
+          <text>{{item.time}}</text>
+        </span>
+        <span class="second">
+          <image class="activity-icon" src="http://ru857uat2.hn-bkt.clouddn.com/images/tab/personal.png" mode="" />
+          <text>{{item.ClubName}}</text>
+        </span>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="baise">
+  <van-button wx:if="{{onClub}}" class="added" size="large" color="#ddd">已加入</van-button>
+  <van-button wx:if="{{!onClub && onAud}}" class="added" size="large" color="#ddd">待审核</van-button>
+  <van-button wx:if="{{!onClub && !onAud}}" bindtap="join" class="add" type="primary" size="large">加入社团</van-button>
+</view>

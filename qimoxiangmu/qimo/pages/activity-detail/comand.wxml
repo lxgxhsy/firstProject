@@ -1,0 +1,43 @@
+<!--pages/activityIndex/comand.wxml-->
+<view>
+  <view class="content-main"> 
+
+  <view style="border: 2px solid #eeee; margin-top: 20rpx;" >
+       <view class="content-main-top">
+    <view class="content-main-top-left" style="background-image: url(http://rtm2v5ukd.hn-bkt.clouddn.com/202304280956875.png);">
+    </view>
+    <view class="content-Personname">
+     <view >
+      张三
+    </view>
+    <view style="display:flex;justify-content: space-between;font-size: 24rpx;border-color: #efefef;">
+            2019年12月3日
+          </view>
+    </view> 
+    </view>
+    
+   <view class="content-main-left">
+     永恒的羽翼不会因为天使的落后，反而变得没有，说出你的江苏婢女地板，的承诺是大家NBC v 超级低俗不错的精神病；
+   </view>
+   <view class="content-main-image">
+     <view class="content-main-images" style="background-image: url(http://rtm2v5ukd.hn-bkt.clouddn.com/202304280956875.png);">
+     </view>
+   </view>
+   <view class="content-main-down">
+   <view class="content-main-down-left" wx:for="{{4}}">
+    <view class="content-main-down-left-left" style="background-image: url(http://rtm2v5ukd.hn-bkt.clouddn.com/202304280956875.png);">
+    </view>
+    <view class="content-main-down-right">
+      <van-button type="primary" color="#ebd4ef" disabled round plain size="large">大号dfghfgh按钮</van-button>
+     </view>
+   </view>
+   <view style="border: 1px solid #eeee;">
+     <text>grrfhnghgfhhhhhhh</text>
+   </view>
+   <text>发送</text>
+    
+   </view>
+  </view>
+ 
+  </view>
+</view>

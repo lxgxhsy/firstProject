@@ -1,0 +1,172 @@
+/* pages/clubmember/clubmember.wxss */
+page {
+  background-color: #e9ecef;
+}
+
+.member {
+  margin: 10px 17px;
+  background-color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  display: flex;
+}
+
+.member image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info_name {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.info_posts {
+  font-size: 11pt;
+  margin-bottom: 5px;
+}
+
+.info_sign {
+  font-size: 11pt;
+  color: #303030;
+}
+
+
+.show-btn {
+  bottom: 88rpx;
+  right: 50rpx;
+  position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: white;
+  border-radius: 50%;
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E5%8A%A0%E5%8F%B7.png');
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 340px;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 9999;
+  background: #f8f8f8;
+  border-radius: 16rpx;
+}
+
+.modal-title {
+  padding: 20rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 50rpx 32rpx;
+}
+
+.modal_scroll{
+  height: 342px;
+  overflow: hidden;
+}
+
+.modal_member {
+  margin: 10px;
+  background-color: #e9ecef;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  color: #030303;
+}
+
+.modal_left{
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_info{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.modal_info image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15rpx;
+  flex-shrink: 0;
+}
+
+.modal_info_name {
+  font-size: 12pt;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.modal_reason {
+  font-size: 10pt;
+  color: #303030;
+}
+
+.modal_icon{
+  width: 180rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.modal_icon image{
+  width: 40px;
+  height: 40px;
+  margin-left: 10rpx;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}

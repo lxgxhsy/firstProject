@@ -1,0 +1,58 @@
+/* pages/classify-index/classify-index.wxss */
+page{
+  background-color: #e9ecef;
+}
+
+.clai{
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.clai_item{
+  height: 150px;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  margin: 6px 17px;
+  margin-bottom: 14px;
+}
+
+.clai_item image{
+  border: 1rpx solid #e9ecef;
+  width: 160px;
+  height: 110px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.item_text{
+  display: flex;
+  flex-direction: column;
+  /* width: 110px; */
+  margin-right: 15rpx;
+}
+
+.item_text1{
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2e2e2e;
+}
+
+.item_text2{
+  margin-top: 30px;
+  font-size: 14px;
+  color: #9c9c9c;
+  /*设置为弹性盒子*/
+  display:-webkit-box;
+  /* 表示几行后超出隐藏 */
+  -webkit-line-clamp:3;
+  /* 超出隐藏 */
+  overflow:hidden;
+  /*超出显示为省略号*/
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  /*强制英文单词自动换行*/
+  word-break:break-all;
+}

@@ -1,0 +1,122 @@
+/* pages/clubRank/number.wxss */
+/* pages/info/info.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ccc {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+.activity-item {
+  display: flex;
+  padding: 15rpx;
+  border: 1px solid #efefef;
+  margin: 6px 17px;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+  box-shadow: 1px 1px 15rpx #ddd;
+}
+
+.thumb {
+  display: flex;
+}
+
+.rankNumber {
+  width: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* margin-top: 20px;
+  margin-right: 10px;
+  width: 40rpx;
+  height: 40px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-around; */
+  /* background: rgba(28, 177, 144, 0.4); */
+}
+
+/* .rankNumber:before,
+.rankNumber:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background: rgba(28, 177, 144, 0.4);
+} */
+
+/* .rankNumber:before {
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+}
+.rankNumber:after {
+    -webkit-transform: rotate(60deg);
+       -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+         -o-transform: rotate(60deg);
+} */
+.rankListId {
+  align-items: center;
+  color: #33c1d3;
+  font-size: 10pt;
+  margin-right: 15rpx;
+}
+
+.thumb image {
+  width: 150px;
+  height: 90px;
+  display: block;
+  margin-right: 15rpx;
+  /* box-shadow: 1px 1px 15rpx #cce6ff; */
+  border: 1rpx solid #eee;
+  border-radius: 8rpx;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  justify-content: space-around;
+  text-align: center;
+  /* 有待商榷 */
+}
+
+.club-title {
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #33c1d3;
+}
+
+.club-name {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.first>text {
+  margin-left: 5rpx;
+  align-content: center;
+  color: #33c1d3;
+}
+
+.second>text {
+  margin-top: 8rpx;
+  align-content: center;
+  margin-left: 5rpx;
+  /* color: #33d1d3; */
+}
+
+.info>span {
+  height: 40rpx;
+  display: flex;
+}

@@ -1,0 +1,20 @@
+<view class="login">
+  <view class="l1">
+    <image src="http://scdwjow71.hn-bkt.clouddn.com/images/icon/loader.png" mode="" />
+  </view>
+  <view class="zong">
+    <view class="b1">
+      <button class="btn1" type="primary" block bindtap="isEnableLogin">微信用户一键登录</button>
+    </view>
+    <!-- <view style="width:250px;height: 65px;" class="b2">
+  <button class="btn1" color="#567F1F"  block >手机号登录/注册</button>
+</view> -->
+    <view class="agree">
+      <checkbox-group bindchange="isEnableChoose">
+        <checkbox value="cc" checked="{{checked}}" class="check"></checkbox><text class="ar">我同意</text>
+        <navigator url="#" class="nv">《用户协议》</navigator>
+      </checkbox-group>
+
+    </view>
+  </view>
+</view>

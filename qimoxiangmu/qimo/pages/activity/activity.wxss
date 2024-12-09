@@ -1,0 +1,98 @@
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #e9ecef;
+}
+
+.search {
+  padding: 6px 18px;
+  display: flex;
+  background-color: #fff;
+  height: 40px;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.search van-search {
+  display: inline-flex;
+}
+
+.search_wid{
+  width: 310px;
+}
+
+.btn_search{
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.ccc {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.activity-item {
+  display: flex;
+  padding: 20rpx;
+  border: 1px solid #efefef;
+  margin: 0 30rpx;
+  margin-bottom: 30rpx;
+  border-radius: 8px;
+  box-shadow: 1px 1px 15rpx #ddd;
+  background-color: #ffffff;
+}
+
+.thumb image {
+  width: 320rpx;
+  height: 180rpx;
+  display: block;
+  border: 1rpx solid #eee;
+  margin-right: 20rpx;
+  border-radius: 4px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  justify-content: space-around;
+  /* text-align: center; */
+}
+
+.activity-title {
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.activity-time {
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.activity-name {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.first>text {
+  margin-top: 6rpx;
+  margin-left: 5rpx;
+  align-content: center;
+  /* color: #aaaaaa; */
+}
+
+.second>text {
+  margin-top: 5rpx;
+  align-content: center;
+  margin-left: 5rpx;
+  /* color: #aaaaaa; */
+}
+
+.info>span {
+  height: 40rpx;
+  display: flex;
+}

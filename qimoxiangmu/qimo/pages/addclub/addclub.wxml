@@ -1,0 +1,28 @@
+<!--pages/addclub/addclub.wxml-->
+<scroll-view scroll-y>
+  <view class="up_background">
+    <image src="{{imgUrl}}" mode="aspectFill"/>
+    <button bindtap="chooseImage">选择背景图片</button>
+  </view>
+
+  
+  <view class="addInfo">
+    <van-cell-group inset>
+      <!--删掉 .van-field__label{color:var(--field-label-color,#646566)} -->
+      <!-- 目录：vant>weapp>field>index.wxss -->
+      <van-field value="{{ clubInfo.name }}" label="名称" placeholder="请输入社团名称" size="large" bindchange="NameChange" />
+      <van-cell title="类型" input-align="right" size="large" is-link>
+        <picker bindchange="pickerChange" class="picker" range="{{picker.arr}}">{{picker.arr[picker.index]}}
+        </picker>
+      </van-cell>
+
+      <van-cell-group>
+        <van-field value="{{ message }}" input-align="left" label="社团介绍" type="textarea" placeholder="请输入社团介绍" autosize bindchange="MessageChange"/>
+      </van-cell-group>
+    </van-cell-group>
+  </view>
+
+  <view class="addInfo-button" bindtap="addNew">
+    <van-button type="primary" size="large">申请社团</van-button>
+  </view>
+</scroll-view>

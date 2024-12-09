@@ -1,0 +1,43 @@
+/* pages/message/message.wxss */
+page{
+  background-color: #e9ecef;
+}
+
+.none{
+  margin-top: 50%;
+  text-align: center;
+}
+
+.message{
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+}
+
+.message image{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.name{
+  margin-top: 8px;
+}
+
+.time{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 10pt;
+  color: #6C6C6C;
+}
+
+.messageText{
+  margin-top: -10px;
+  width: 280px;
+  padding: 11px 8px;
+  background-color: white;
+  border-radius: 8px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}

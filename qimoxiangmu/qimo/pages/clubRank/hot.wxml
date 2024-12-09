@@ -1,0 +1,22 @@
+<!--pages/clubRank/hot.wxml-->
+<view class="ccc">
+  <!-- 活动列表 -->
+  <view bindtap="toClubIndex" data-id="{{item.id}}" class="activity-item" wx:for="{{clubList}}" wx:key="index">
+    <!-- 背景图片 -->
+    <view class="thumb">
+      <view class="rankNumber">
+        <text class="hotRankId">{{index + 1}}</text>
+      </view>
+      <image src="{{item.images}}" mode="aspectFill"></image>
+    </view>
+
+    <!-- 具体信息 -->
+    <view class="info">
+      <text class="club-title">{{item.name}}</text>
+      <span class="first">
+        <text>{{item.activityName}}</text></span>
+      <span class="second">
+        热力值：<text>{{item.number}}</text></span>
+    </view>
+  </view>
+</view>

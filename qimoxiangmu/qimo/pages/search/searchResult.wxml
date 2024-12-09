@@ -1,0 +1,64 @@
+<!--pages/search/searchResult.wxml-->
+<view>
+  <van-search value="{{ value }}" shape="round" placeholder="请输入搜索关键词" use-action-slot bind:change="onChange" bind:search="onSearch">
+    <view class="search-text" slot="action" bind:tap="onClick" bindtap="clear">取消</view>
+  </van-search>
+
+  <van-tabs bind:click="onClick">
+    <van-tab title="活动">
+      <view class="ccc">
+        <!-- 活动列表 -->
+        <view style="margin-top: 10px;text-align: center;" wx:if="{{!act_has}}">暂无该活动</view>
+        <view class="activity-item" wx:for="{{activityList}}" wx:key="id" data-id="{{item.id}}" data-cid="{{item.clubid}}" bindtap="toActivityIndex">
+          <navigator url="/pages/activityIndex/activityIndex" open-type="navigate">
+            <!-- 背景图片 -->
+            <view class="thumb">
+              <image src="{{item.images}}" mode="" />
+            </view>
+          </navigator>
+
+          <!-- 具体信息 -->
+          <view class="info">
+            <text class="activity-title">{{item.name}}</text>
+            <!-- 处理两个图标 -->
+            <span class="first">
+              <image class="activity-time" src="http://ru857uat2.hn-bkt.clouddn.com/images/tab/time.png" mode=""></image>
+              <text>{{item.time}}</text>
+            </span>
+            <span class="second">
+              <image class="activity-name" src="http://ru857uat2.hn-bkt.clouddn.com/images/tab/personal.png" mode="" />
+              <text>{{item.ClubName}}</text>
+            </span>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="社团">
+      <view class="ccc">
+        <!-- 社团列表 -->
+        <view style="margin-top: 10px;text-align: center;" wx:if="{{!club_has}}">暂无该社团</view>
+        <view class="activity-item" wx:for="{{ClubList}}" wx:key="id" data-id="{{item.id}}" bindtap="toClubIndex">
+          <navigator url="/pages/activityIndex/activityIndex" open-type="navigate">
+            <!-- 背景图片 -->
+            <view class="thumb">
+              <image src="{{item.images}}" mode="" />
+            </view>
+          </navigator>
+
+          <!-- 具体信息 -->
+          <view class="info">
+            <text class="activity-title">{{item.ClubName}}</text>
+            <!-- 处理两个图标 -->
+            <span class="first">
+              <text>人数：{{item.number}}</text></span>
+            <span class="second">
+              <text>{{item.slogan}}</text></span>
+          </view>
+        </view>
+      </view>
+
+    </van-tab>
+  </van-tabs>
+
+
+</view>

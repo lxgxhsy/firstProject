@@ -1,0 +1,84 @@
+{
+  "pages": [ 
+    "pages/index/index",
+    "pages/login/index",
+    "pages/classify/classify",
+    "pages/activity/activity",
+    "pages/mine/mine",
+    "pages/myclub/myclub",
+    "pages/myinfo/myinfo",
+    "pages/myactivity/myactivity",
+    
+    "pages/message/message",
+    "pages/clubindex/clubindex",
+    "pages/clubmember/clubmember",
+    "pages/addclub/addclub",
+    "pages/addactivity/addactivity",
+    "pages/activity-detail/activityIndex",
+    "pages/activity-detail/comand",
+    "pages/activity-detail/comandAll",
+    "pages/activityRank/clickNumber",
+    "pages/activityRank/Laster",
+    "pages/classify-index/classify-index",
+    "pages/clubRank/hot",
+    "pages/clubRank/number",
+    "pages/clubRank/update",
+    "pages/search/search",
+    "pages/search/searchResult"
+  ],
+  "tabBar": {
+    "selectedColor": "#33c1d3",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "主页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home-active.png"
+    },{
+      "pagePath": "pages/classify/classify",
+      "text": "社团分类",
+      "iconPath": "images/classify.png",
+      "selectedIconPath": "images/classify-active.png"
+    },{
+      "pagePath": "pages/activity/activity",
+      "text": "活动",
+      "iconPath": "images/activity.png",
+      "selectedIconPath": "images/activity-active.png"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "images/personal.png",
+      "selectedIconPath": "images/personal-active.png"
+    }]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-grid": "@vant/weapp/grid/index",
+  "van-grid-item": "@vant/weapp/grid-item/index",
+  "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+  "van-popup": "@vant/weapp/popup/index"
+  }
+}

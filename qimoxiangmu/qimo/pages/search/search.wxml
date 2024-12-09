@@ -1,0 +1,27 @@
+<!--pages/search/search.wxml-->
+<view >
+  <van-search
+  value="{{ value }}"
+  shape="round"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+>
+<view class="search-text" slot="action" bind:tap="onClick" bindtap="search">搜索</view>
+</van-search>
+<view class="content-content">
+<view>
+  <text style="font-size: 50rpx; font-weight: bold;">热门搜索</text>
+</view>
+  <view style="margin-left: 20px; display: flex;" >
+  <view style="margin-left: 10px; display: flex;" wx:for="{{searchList}}" wx:key="item" 
+  data-search="{{item.name}}" bindtap="infill">
+      <van-button type="primary" size="small" round plain disabled>{{item.name}}</van-button>
+  </view>
+  
+  </view>
+</view>
+
+</view>
+

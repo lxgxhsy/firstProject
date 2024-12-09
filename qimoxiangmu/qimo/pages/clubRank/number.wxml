@@ -1,0 +1,23 @@
+<view class="ccc">
+  <!-- 活动列表 -->
+  <view bindtap="toClubIndex" data-id="{{item.id}}" class="activity-item" wx:for="{{clubList}}" wx:key="index">
+    <navigator url="/pages/club/club" open-type="navigate">
+      <!-- 背景图片 -->
+      <view class="thumb">
+        <view class="rankNumber">
+          <text class="rankListId">{{index + 1}}</text>
+        </view>
+        <image src="{{item.images}}" mode="aspectFill" />
+      </view>
+    </navigator>
+
+    <!-- 具体信息 -->
+    <view class="info">
+      <text class="club-title">{{item.name}}</text>
+      <span class="first">
+        总人数：<text>{{item.number}}</text></span>
+      <span class="second">
+        <text>{{item.sound}}</text></span>
+    </view>
+  </view>
+</view>

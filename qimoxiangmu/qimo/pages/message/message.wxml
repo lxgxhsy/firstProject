@@ -1,0 +1,13 @@
+<!--pages/message/message.wxml-->
+<scroll-view scroll-y>
+  <view class="none" wx:if="{{mess.length === 0}}">暂无信息</view>
+  <view wx:for="{{mess}}" wx:key="index">
+    <view class="message">
+      <image src="{{item.headimg}}" mode="" />
+      <text class="name">{{item.name}}</text>
+      <text class="time">{{item.time}}</text>
+    </view>
+    <view class="messageText">{{item.message}}</view>
+  </view>
+
+</scroll-view>

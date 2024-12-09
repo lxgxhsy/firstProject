@@ -1,0 +1,72 @@
+/* pages/search/searchResult.wxss */
+page{
+  display: flex;
+  flex-direction: column;
+   height: 100%;
+}
+
+.search-text{
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+}
+.ccc{
+  display: flex;
+   flex-direction: column;
+   height: 100%;
+ }
+ 
+ 
+ .activity-item{
+   display: flex;
+   padding: 15rpx;
+   border: 1px solid #efefef;
+   margin: 30rpx;
+   border-radius: 8rpx;
+   box-shadow: 1px 1px 15rpx #ddd;
+   }
+   .thumb image{
+     width: 300rpx;
+     height: 250rpx;
+     display: block;
+     margin-right: 15rpx;
+   }
+   .info{
+     display: flex;
+     flex-direction: column;
+     font-size: 24rpx;
+    justify-content: space-around;
+    text-align: center;
+    /* 有待商榷 */
+   }
+   
+   .activity-title{
+     font-weight: bold;
+     font-size: 30rpx;
+   }
+   .activity-time{
+     width: 40rpx;
+     height: 40rpx;
+    text-align: center;
+    font-weight: bold;
+   }
+   .activity-name{
+     width: 40rpx;
+     height: 40rpx;
+   }
+   .first > text{
+    margin-top: 6rpx;
+    margin-left: 5rpx;
+    align-content: center;
+    color:#aaaaaa;
+   }
+   .second > text{
+     margin-top: 8rpx;
+     align-content: center;
+     margin-left: 5rpx;
+     color:#aaaaaa;
+    }
+   .info > span{
+     height: 40rpx;
+     display: flex;
+   }
+

@@ -1,0 +1,56 @@
+<!--pages/myactivity/myactivity.wxml-->
+<scroll-view scroll-y>
+  <view class="myactivity">
+    <van-tabs color="#33C1D3">
+      <van-divider />
+      <van-tab title="进行中">
+        <view style="text-align:center;" wx:if="{{activityList === null}}">暂无</view>
+        <view data-id="{{item.id}}" data-cid="{{item.clubId}}" bindtap="toActivityIndex" class="activity-item" wx:for="{{activityList}}" wx:key="id">
+          <!-- 图片 -->
+          <view class="thumb">
+            <image src="{{item.images}}" mode="aspectFill" />
+          </view>
+          <!-- 具体信息 -->
+          <view class="info">
+            <text class="activity-title">{{item.name}}</text>
+            <!-- 处理两个图标 -->
+            <span class="first">
+              <image class="activity-icon" src="http://ru857uat2.hn-bkt.clouddn.com/images/tab/time.png" mode=""></image>
+              <text>{{item.time}}</text>
+            </span>
+            <span class="second">
+              <image class="activity-icon" src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E7%A4%BE%E5%8C%BA.png" mode="" />
+              <text>{{item.ClubName}}</text>
+            </span>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="已结束">
+        <view style="text-align:center;" wx:if="{{overActivityList === null}}">暂无</view>
+        <view data-id="{{item.id}}"  data-cid="{{item.clubId}}" bindtap="toActivityIndex" class="activity-item" wx:for="{{overActivityList}}" wx:key="id">
+          <navigator url="/pages/activityIndex/activityIndex" open-type="navigate">
+            <!-- 图片 -->
+            <view class="thumb">
+              <image src="{{item.images}}" mode="" />
+            </view>
+          </navigator>
+          <!-- 具体信息 -->
+          <view class="info">
+            <text class="activity-title">{{item.name}}</text>
+            <!-- 处理两个图标 -->
+            <span class="first">
+              <image class="activity-icon" src="http://ru857uat2.hn-bkt.clouddn.com/images/tab/time.png" mode=""></image>
+              <text>{{item.time}}</text>
+            </span>
+            <span class="second">
+              <image class="activity-icon" src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E7%A4%BE%E5%8C%BA.png" mode="" />
+              <text>{{item.ClubName}}</text>
+            </span>
+          </view>
+        </view>
+      </van-tab>
+    </van-tabs>
+  </view>
+
+  <text bindtap="toAddAct" class="show-btn"></text>
+</scroll-view>

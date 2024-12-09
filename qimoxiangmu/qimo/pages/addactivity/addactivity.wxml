@@ -1,0 +1,42 @@
+<view class="all">
+  <view class="title">
+    <input bindinput="title_input" placeholder="标题" maxlength="15" />
+  </view>
+  <textarea bindinput="content_input" placeholder="请将内容填写在这..." type="text" maxlength="500" class="article"></textarea>
+</view>
+
+<!-- 时间 -->
+<picker mode="date" header-text="选择时间"  value="{{startDate}}" bindchange="bindDateChange">
+  <view class="font30">
+    <text class="color3">开始时间：</text>
+    <text class="color6">{{startDate}}</text>
+    <text class="timeIcon">▼</text>
+  </view>
+</picker>
+<picker mode="date" header-text="选择时间"  value="{{endDate}}" bindchange="bindDateChange2">
+  <view class="font30">
+    <text class="color3">结束时间：</text>
+    <text class="color6">{{endDate}}</text>
+    <text class="timeIcon">▼</text>
+  </view>
+</picker>
+
+<view class="mid">
+  <text class="chose_title">选择图片</text>
+  <view class="imageRootAll">
+    <block wx:for="{{imgList}}" wx:key="index">
+      <view class="imgItem">
+        <image class="img" src='{{item}}' mode='aspectFill'></image>
+        <!-- <image class="closeImg" bindtap="DeleteImg" src="" data-index="{{index}}" /> -->
+      </view>
+    </block>
+    <!-- 选择图片按钮 -->
+    <view wx:if="{{imgList.length<6}}" class="imgItem" bindtap="uploadToQn">
+      <image class="photo" src="http://scdwjow71.hn-bkt.clouddn.com/images/icon/add.png" />
+      <!-- <image class="photo" src="/images/添加.png" /> -->
+    </view>
+  </view>
+</view>
+<view class="btn">
+  <view bindtap="fabu" class="btn_t">发布</view>
+</view>

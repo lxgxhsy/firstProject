@@ -1,0 +1,22 @@
+<view class="top" bindtap="myinfo">
+  <image src="{{headimg}}" mode="" />
+  <view class="top-text">
+    <view class="name">{{username}}</view>
+    <view class="id">id:{{id}}</view>
+    <view class="introduction">{{message}}</view>
+  </view>
+  <view class="arrow">
+    <van-icon name="arrow" />
+  </view>
+</view>
+
+
+<view class="mid">
+  <van-cell-group inset>
+    <van-cell title="我的社团" is-link link-type="navigateTo" url="/pages/myclub/myclub" />
+    <van-cell title="我的活动" is-link link-type="navigateTo" url="/pages/myactivity/myactivity" />
+    <van-cell title="消息中心" is-link link-type="navigateTo" url="/pages/message/message" />
+    <van-cell title="意见反馈" is-link />
+    <van-cell title="检查更新" is-link />
+  </van-cell-group>
+</view>

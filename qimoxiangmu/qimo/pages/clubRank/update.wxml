@@ -1,0 +1,22 @@
+<!--pages/clubRank/update.wxml-->
+<view class="ccc">
+  <!-- 活动列表 -->
+  <view bindtap="toClubIndex" class="activity-item" wx:for="{{clubList}}" wx:key="index">
+    <!-- 背景图片 -->
+    <view class="thumb">
+      <view class="rankUpdate">
+        <text class="rankListId">{{index + 1}}</text>
+      </view>
+      <image src="{{item.images}}" mode="aspectFill" />
+    </view>
+
+    <!-- 具体信息 -->
+    <view class="info">
+      <text class="club-title">{{item.name}}</text>
+      <span class="first">
+        更新时间：<text>{{item.time}}</text></span>
+      <span class="first">
+        <text>{{item.slogan}}</text></span>
+    </view>
+  </view>
+</view>

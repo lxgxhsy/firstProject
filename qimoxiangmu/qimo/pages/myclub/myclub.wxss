@@ -1,0 +1,39 @@
+/* pages/myclub/myclub.wxss */
+page{
+  background-color: #e9ecef;
+}
+
+.myclub{
+  margin: 12px 32px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  margin-bottom: 22px;
+}
+
+.myclub image{
+  border: 1rpx solid #ccc;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: 180px;
+}
+
+.myclub text{
+  margin: 8px;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.myclub_add{
+  margin: 10px 32px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 22px;
+}
+
+.myclub_add image{
+  width: 60%;
+  margin-left: 56px;
+}

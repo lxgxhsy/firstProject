@@ -1,0 +1,24 @@
+<!--pages/activityRank/clickNumber.wxml-->
+<view class="ccc">
+  <!-- 活动列表 -->
+  <view bindtap="toActivityIndex" class="activity-item" wx:for="{{clubList}}" wx:key="index">
+    <!-- 背景图片 -->
+    <view class="thumb">
+      <image src="{{item.images}}" mode="aspectFill"></image>
+      <view class="badge-ribbon"><text class="hotRankId">{{index + 1}}</text></view>
+    </view>
+
+    <!-- 具体信息 -->
+    <view class="middle">
+      <text class="club-title">{{item.name}}</text>
+      <!-- 处理两个图标 -->
+      <span class="first">
+        时间：<text>{{item.time}}</text></span>
+      <span class="second">
+        单位：<text>{{item.clubName}}</text></span>
+    </view>
+    <view class="down">
+      参加<text style="margin-top: 5px; color: #aaaaaa;"> {{item.clickNumber}}</text>
+    </view>
+  </view>
+</view>

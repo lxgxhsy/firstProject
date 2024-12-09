@@ -1,0 +1,52 @@
+/* pages/mine/mine.wxss */
+page{
+  background-color: #e9ecef;
+}
+
+.top{
+  margin: 12px 17px;
+  background: #fff;
+  display: flex;
+  padding: 30rpx 30rpx;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.top image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+
+.top-text{
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+}
+
+.name{
+  font-weight: bold;
+}
+
+.id{
+  font-size: 8pt;
+  /* font-weight: bold; */
+}
+.introduction{
+  font-size: 9pt;
+  color: #b2b2b2;
+}
+
+.arrow{
+  width: 40rpx;
+  color: #b2b2b2;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  /* margin-left: 80px; */
+}
+
+.mid{
+  font-weight: bold;
+}

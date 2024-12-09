@@ -1,0 +1,96 @@
+<!--pages/activityIndex/activityIndex.wxml-->
+<view class="wholepage">
+  <!--?-->
+
+  <swiper class="card-swiper" indicator-dots circular autoplay interval="5000" duration="500" indicator-color="#8799a3" indicator-active-color="#0081ff">
+    <swiper-item wx:for="{{swiperList}}" wx:key="index">
+      <view class="swiper-item">
+        <image bindtap="clickImg" class="swiperImage" src="{{item.url}}" mode="aspectFit" wx:if="{{item.type=='image'}}"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="down">
+    <view class="content">
+      <view class="title">{{title}}</view>
+      <view class="content-middle">
+        <span class="first">
+          <image class="activity-name" src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E7%A4%BE%E5%8C%BA.png" mode=""></image>
+          <text>{{clubName}}</text>
+        </span>
+        <span class="second">
+          <image class="activity-time" src="http://ru857uat2.hn-bkt.clouddn.com/images/tab/time.png" mode=""></image>
+          <text>{{startime}}~{{endtime}}</text>
+        </span>
+      </view>
+      <!-- <text>共有{{num}}人</text> -->
+      <view class="content-up">
+        {{sound}}
+      </view>
+
+      <view class="content-down">
+        <!-- <input type="text" value="已报名20人" /> -->
+        <text decode="true">已报名&nbsp;{{number}}&nbsp;人</text>
+        <view class="content-down-right">
+          <button round type="primary" size="mini" bindtap="apply">{{result}}</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="command">
+    <view class="content-main">
+      <view class="content-top">
+        <span>
+          <text class="content-top-first">评价</text>
+          <text class="content-top-second">({{comments.length}})</text>
+          <text bindtap="gotoInfo" class="content-top-third">查看更多</text>
+        </span>
+      </view>
+      <view wx:for="{{comments}}" wx:key="index" class="comment">
+        <view class="content-main-top">
+          <view class="content-main-top-left">
+            <image src="{{item.userImg}}" />
+          </view>
+          <view class="content-Personname">
+            <view>{{item.username}}</view>
+            <view style="display:flex;justify-content: space-between;font-size: 24rpx;border-color: #efefef;">
+              {{item.time}}
+            </view>
+          </view>
+          <view class="content-main-top-right" bindtap="gotoComand">
+            <image src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/fanhui.png" mode="" />
+          </view>
+        </view>
+
+        <view class="content-main-left">
+          {{item.content}}
+        </view>
+
+        <!-- 评论的图片 -->
+        <!-- <view class="content-main-image">
+          <image src="{{item.picture}}" mode="" />
+        </view> -->
+
+        <view class="content-main-down">
+          <view class="zan">
+            <image data-id="{{item.id}}" bindtap="zan" src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E7%82%B9%E8%B5%9E.png" />
+            <text>{{item.zan}}</text>
+          </view>
+          <view class="look">
+            <image src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E6%B5%8F%E8%A7%88.png" />
+            <text>{{item.look}}</text>
+          </view>
+          <view class="num">
+            <image src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E6%B6%88%E6%81%AF.png" />
+            <text>{{item.num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="baise">
+  <input bindinput="comI" class="input" auto-focus placeholder="请输入评论"/>
+  <button bindtap="fasong" type="primary" size="mini" class="button_fa">发送</button>
+</view>

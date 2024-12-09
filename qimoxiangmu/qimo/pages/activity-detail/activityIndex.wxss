@@ -1,0 +1,280 @@
+/* pages/activityIndex/activityIndex.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* background-color: #e9ecef; */
+}
+
+.card-swiper{
+  background-color: #eee;
+  /* border: 1rpx solid #eee; */
+  height: 240px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.swiperImage {
+  width: 100%;
+}
+
+/* .down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.content {
+  border: 1px solid #efefef;
+  border-radius: 8rpx;
+  box-shadow: 1px 1px 15rpx #ddd;
+  margin: 6px 17px;
+  margin-bottom: 12px;
+  flex-direction: column;
+  display: flex;
+  padding: 15rpx;
+}
+
+.title {
+  background-color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16pt;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.content-middle{
+  /* display: flex; */
+  margin: 10rpx 0px;
+  justify-content: center;
+}
+
+.first{
+  margin-bottom: 10rpx;
+}
+
+.activity-name {
+  width: 40rpx;
+  height: 40rpx;
+}
+.activity-time {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.first>text {
+  margin-left: 6rpx;
+  font-size: 10pt;
+  color: #aaaaaa;
+}
+
+.second>text {
+  margin-left: 6rpx;
+  font-size: 10pt;
+  color: #aaaaaa;
+}
+
+.content-middle span {
+  display: flex;
+  height: 40rpx;
+}
+
+.content-up{
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.content-down {
+  margin-top: 15rpx;
+  display: flex;
+  align-items: center;
+}
+
+.content-down text {
+  font-size: 12pt;
+  flex: 1;
+}
+
+.content-down-right {
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.command {
+  /* border: 1rpx solid #efefef; */
+  padding-top: 6rpx;
+  display: block;
+  box-shadow: 1px 1px 15rpx #ddd;
+}
+
+.content-top {
+  padding: 6rpx 17px;
+  padding-bottom: 20rpx;
+}
+
+.content-top .content-top-second {
+  color: #aaaaaa;
+  font-size: 10pt;
+}
+
+.content-top .content-top-third {
+  float: right;
+  color: #33c3d1;
+  text-shadow: rgba(133, 33, 150, 0.6);
+}
+
+.comment{
+  border-top: 2rpx solid #ddd;
+  margin-bottom: 20rpx;
+}
+
+.content-main {
+  display: block;
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.content-main-top {
+  position: relative;
+  display: flex;
+  padding-right: 10rpx;
+  height: 140rpx;
+  background-color: #ffffff;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.content-main-top-left {
+  width: 96rpx;
+  height: 96rpx;
+  font-size: 2em;
+  position: absolute;
+  left: 30rpx;
+  font-variant: small-caps;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  color: #ffffff;
+  white-space: nowrap;
+  border-radius: 50%;
+}
+
+.content-main-top-left image{
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+}
+.content-Personname {
+  flex: 1;
+  position: absolute;
+  left: 145rpx;
+}
+.content-main-top-right {
+  width: 40rpx;
+  height: 40rpx;
+  font-size: 2em;
+  position: absolute;
+  left: 660rpx;
+  margin-top: -30px;
+}
+
+.content-main-top-right image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.content-main-left {
+  padding: 0 30rpx 0;
+  max-height: 6.4em;
+  overflow: hidden;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.content-main-image{
+  margin-left: 17px;
+  width: 160px;
+  height: 160px;
+}
+
+.content-main-image image{
+  width: 160px;
+  height: 160px;
+  border: 1rpx solid #ddd;
+}
+
+.content-main-down {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+  margin-left: 17px;
+}
+
+.content-main-down text {
+  color: #aaaaaa;
+  font-size: 10pt;
+}
+
+.zan{
+  display: flex;
+}
+.zan image{
+  margin-left: 10rpx;
+  width: 16px;
+  height: 16px;
+}
+
+.look{
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.look image{
+  width: 20px;
+  height: 20px;
+}
+
+.num{
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin-right: 17px;
+}
+.num image{
+  width: 20px;
+  height: 20px;
+}
+
+.baise{
+  padding: 10px 17px;
+  background:#eee;
+  display:flex;
+  position:fixed; 
+  width:100%;
+  /* height:150rpx; */
+  padding-bottom: 20px;
+  z-index:665;
+  bottom:0rpx;
+}
+
+.input{
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  height: 40px;
+  width: 280px;
+}
+.button_fa{
+  height: 40px;
+  margin: 0 10rpx;
+}

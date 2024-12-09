@@ -1,0 +1,112 @@
+<!-- 社团主页 -->
+<view>
+  <view class="search">
+    <van-icon name="http://scdwjow71.hn-bkt.clouddn.com/images/icon/loader.png" size="34px" />
+    <van-search custom-class="search_wid" use-action-slot value="{{ value }}" placeholder="请输入搜索关键词" bindtap="toSearch">
+      <view class="btn_search" slot="action">搜索</view>
+    </van-search>
+  </view>
+
+  <view class="main">
+    <van-tabs color="#33C1D3">
+      <van-tab title="社团推荐">
+        <swiper class="swiper" indicator-dots circular autoplay>
+          <swiper-item wx:for="{{clubSwiper}}" wx:key="id">
+            <image bindtap="toClubIndex" class="swiperImage" src="{{item.image}}" mode="aspectFill" />
+          </swiper-item>
+        </swiper>
+        <view class="content">
+          <view class="content-first">
+            <view class="content-first-first">
+              <text class="index_title">人数最多</text>
+              <text class="index_more" bindtap="toNumber">查看更多</text>
+            </view>
+            <view class="content-first-second">
+              <van-grid column-num="2" border="{{ false }}">
+                <van-grid-item bindtap="toClubIndex" data-id="{{item.id}}" wx:for="{{clubMostNumber}}" wx:key="index" use-slot>
+                  <image src="{{item.image}}" mode="aspectFill"/>
+                  <text>{{item.name}}</text>
+                </van-grid-item>
+              </van-grid>
+              <view style="height: 5px;">
+              </view>
+            </view>
+          </view>
+          <view class="content-first">
+            <view class="content-first-first">
+              <text class="index_title">近期热门</text>
+              <text class="index_more" bindtap="toHot">查看更多</text>
+            </view>
+            <view class="content-first-second">
+              <van-grid column-num="2" border="{{ false }}">
+                <van-grid-item bindtap="toClubIndex" data-id="{{item.id}}" wx:for="{{clubHot}}" wx:key="index" use-slot>
+                  <image src="{{item.image}}" mode="aspectFill" />
+                  <text>{{item.name}}</text>
+                </van-grid-item>
+              </van-grid>
+              <view style="height: 5px;">
+              </view>
+            </view>
+          </view>
+          <view class="content-first">
+            <view class="content-first-first">
+              <text class="index_title">近期更新</text>
+              <text class="index_more" bindtap="toUpdate">查看更多</text>
+            </view>
+            <view class="content-first-second">
+              <van-grid column-num="2" border="{{ false }}">
+                <van-grid-item bindtap="toClubIndex" data-id="{{item.id}}" wx:for="{{clubUpdate}}" wx:key="index" use-slot>
+                  <image src="{{item.image}}" mode="aspectFill" />
+                  <text>{{item.name}}</text>
+                </van-grid-item>
+              </van-grid>
+              <view style="height: 5px;">
+              </view>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="活动推荐">
+        <swiper class="swiper" indicator-dots circular autoplay>
+          <swiper-item wx:for="{{activitySwiper}}" wx:key="id">
+            <image bindtap="toActivityIndex" class="swiperImage" src="{{item.image}}" mode="aspectFill" />
+          </swiper-item>
+        </swiper>
+        <view class="content">
+          <view class="content-first">
+            <view class="content-first-first">
+              <text class="index_title">最多参与</text>
+              <text class="index_more" bindtap="toClick">查看更多</text>
+            </view>
+            <view class="content-first-second">
+              <van-grid column-num="2" border="{{ false }}">
+                <van-grid-item bindtap="toActivityIndex" data-id="{{item.id}}"  data-clubid="{{item.clubId}}" wx:for="{{actOnClick}}" wx:key="id" use-slot>
+                  <image src="{{item.image}}"  mode="aspectFill"/>
+                  <text>{{item.title}}</text>
+                </van-grid-item>
+              </van-grid>
+              <view style="height: 5px;">
+              </view>
+            </view>
+          </view>
+          <view class="content-first">
+            <view class="content-first-first">
+              <text class="index_title">最新活动</text>
+              <text class="index_more" bindtap="toLaster">查看更多</text>
+            </view>
+            <view class="content-first-second">
+              <van-grid column-num="2" border="{{ false }}">
+                <van-grid-item bindtap="toActivityIndex" data-id="{{item.id}}" data-clubid="{{item.clubId}}" wx:for="{{actNew}}" wx:key="id" use-slot>
+                  <image src="{{item.image}}" mode="aspectFill" />
+                  <text>{{item.title}}</text>
+                </van-grid-item>
+              </van-grid>
+              <view style="height: 5px;">
+              </view>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+    </van-tabs>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<!--pages/activityIndex/comandAll.wxml-->
+<view>
+  <view class="content-main">
+
+    <view wx:for="{{commentList}}" style="border: 2px solid #eeee; margin-top: 20rpx;">
+      <view class="content-main-top">
+        <view class="content-main-top-left" style="background-image: url({{item.icon}});"></view>
+        <view class="content-Personname">
+          <view>{{item.name}}</view>
+          <view style="display:flex;justify-content: space-between;font-size: 24rpx;border-color: #efefef;">{{item.time}}</view>
+        </view>
+        <view class="content-main-top-right" bindtap="gotoComand">
+          <image src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/fanhui.png" mode="" />
+        </view>
+      </view>
+
+      <view class="content-main-left">
+        {{item.detail}}
+      </view>
+      <view class="content-main-image">
+        <view class="content-main-images" style="background-image: url({{item.background}});">
+        </view>
+      </view>
+      <view class="content-main-down">
+        <view style="position: absolute; left: 230px; display: flex;">
+          <image style="width: 20px;height: 20px;" src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E6%B5%8F%E8%A7%88.png" mode="" />
+          <text>{{item.look}}</text>
+        </view>
+        <view style="position: absolute; left: 275px; display: flex;">
+          <image style="width: 16px;height: 16px;" src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E7%82%B9%E8%B5%9E.png" mode="" />
+          <text style="margin-left: 2px;">{{item.dianzan}}</text>
+        </view>
+        <view style="position: absolute; left: 310px; display: flex;">
+          <image style="width: 18px;height: 18px;" src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E6%B6%88%E6%81%AF.png" mode="" />
+          <text>{{item.reply}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

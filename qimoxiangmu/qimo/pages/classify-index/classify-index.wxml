@@ -1,0 +1,12 @@
+<!--pages/classify-index/classify-index.wxml-->
+<view class="clai">
+  <view class="clai_item" wx:for="{{club}}" wx:key="index">
+    <view class="item_pic">
+      <image src="{{item.src}}" mode="aspectFill"></image>
+    </view>
+    <view class="item_text">
+      <text class="item_text1">{{item.name}}</text>
+      <text class="item_text2">{{item.slogan}}</text>
+    </view>
+  </view>
+</view>

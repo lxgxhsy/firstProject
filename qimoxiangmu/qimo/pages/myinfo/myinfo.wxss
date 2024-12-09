@@ -1,0 +1,22 @@
+/* pages/myinfo/myinfo.wxss */
+page{
+  background-color: #e9ecef;
+}
+
+.myinfo{
+  margin: 12px 0;
+}
+
+.myinfo image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.picker{
+  color: black;
+}
+
+.myinfo-button{
+  margin: 30px 17px;
+}

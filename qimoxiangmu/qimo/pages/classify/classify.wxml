@@ -1,0 +1,98 @@
+<!--分类-->
+<view class="cla_tap">
+  <van-icon name="http://ru857uat2.hn-bkt.clouddn.com/images/icon/loader.png" size="34px" />
+  <van-search custom-class="search_wid" use-action-slot value="{{ value }}" placeholder="请输入搜索关键词">
+    <view class="btn_search" slot="action" bindtap="toSearch">搜索</view>
+  </van-search>
+</view>
+
+<view class="cla_character">
+  <!-- <div class="cla_character_icon">
+    <van-image width="28" height="28" src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E7%BB%84%20906%403x.png" />
+    <text>全部分类</text>
+  </div> -->
+  <div data-cl="1" bindtap="toclaIndex" class="cla_character_icon">
+    <van-image width="28" height="28" src="http://scdwjow71.hn-bkt.clouddn.com/images/icon/%E7%BB%84%20905%403x.png" />
+    <text>理论研究</text>
+  </div>
+  <div data-cl="2" bindtap="toclaIndex" class="cla_character_icon">
+    <van-image width="28" height="28" src="http://scdwjow71.hn-bkt.clouddn.com/images/icon/%E8%B7%AF%E5%BE%84%20180%403x.png" />
+    <text>体育竞技</text>
+  </div>
+  <div data-cl="3" bindtap="toclaIndex" class="cla_character_icon">
+    <van-image width="28" height="28" src="http://scdwjow71.hn-bkt.clouddn.com/images/icon/%E8%B7%AF%E5%BE%84%20178%403x.png" />
+    <text>科技创新</text>
+  </div>
+  <div data-cl="4" bindtap="toclaIndex" class="cla_character_icon">
+    <van-image width="28" height="28" src="http://scdwjow71.hn-bkt.clouddn.com/images/icon/%E8%B7%AF%E5%BE%84%20179%403x.png" />
+    <text>艺术修养</text>
+  </div>
+</view>
+
+
+<view class="cla_main_content">
+  <view class="cla_main_title">
+    <text class="content_title">理论研究类</text>
+    <text data-cl="1" class="content_goSearch" bindtap="toclaIndex">查看更多</text>
+  </view>
+  <view class="content_item">
+    <van-grid column-num="3" border="{{ false }}">
+      <van-grid-item use-slot wx:for="{{club_1}}" wx:key="index">
+        <image data-clubid="{{item.id}}" bindtap="toClubIndex" src="{{item.src}}" mode="aspectFill" />
+        <text>{{item.name}}</text>
+      </van-grid-item>
+    </van-grid>
+  </view>
+</view>
+
+
+<view class="cla_main">
+  <view class="cla_main_content">
+    <view class="cla_main_title">
+      <text class="content_title">体育竞技类</text>
+      <text data-cl="2" bindtap="toclaIndex" class="content_goSearch">查看更多</text>
+    </view>
+    <view class="content_item">
+      <van-grid column-num="3" border="{{ false }}">
+        <van-grid-item use-slot wx:for="{{club_2}}" wx:key="index">
+          <image data-clubid="{{item.id}}" bindtap="toClubIndex" src="{{item.src}}" mode="aspectFill"/>
+          <text>{{item.name}}</text>
+        </van-grid-item>
+      </van-grid>
+    </view>
+  </view>
+</view>
+
+<view class="cla_main">
+  <view class="cla_main_content">
+    <view class="cla_main_title">
+      <text class="content_title">科技创新类</text>
+      <text data-cl="3" bindtap="toclaIndex" class="content_goSearch">查看更多</text>
+    </view>
+    <view class="content_item">
+      <van-grid column-num="3" border="{{ false }}">
+        <van-grid-item use-slot wx:for="{{club_3}}" wx:key="index">
+          <image data-clubid="{{item.id}}" bindtap="toClubIndex" src="{{item.src}}" mode="aspectFill" />
+          <text>{{item.name}}</text>
+        </van-grid-item>
+      </van-grid>
+    </view>
+  </view>
+</view>
+
+<view class="cla_main">
+  <view class="cla_main_content">
+    <view class="cla_main_title">
+      <text class="content_title">艺术修养类类</text>
+      <text data-cl="4" bindtap="toclaIndex" class="content_goSearch">查看更多</text>
+    </view>
+    <view class="content_item">
+      <van-grid column-num="3" border="{{ false }}">
+        <van-grid-item use-slot wx:for="{{club_4}}" wx:key="index">
+          <image data-clubid="{{item.id}}" bindtap="toClubIndex" src="{{item.src}}" mode="aspectFill" />
+          <text>{{item.name}}</text>
+        </van-grid-item>
+      </van-grid>
+    </view>
+  </view>
+</view>

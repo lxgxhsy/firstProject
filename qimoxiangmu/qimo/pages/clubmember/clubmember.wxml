@@ -1,0 +1,45 @@
+<!--pages/clubmember/clubmember.wxml-->
+<scroll-view scroll-y>
+  <view wx:for="{{memberList}}" wx:key="index">
+    <view class="member">
+      <image src="{{item.headImg}}" mode="" />
+      <view class="info">
+        <text class="info_name">{{item.name}}</text>
+        <text class="info_posts">{{item.posts}}</text>
+        <text class="info_sign">{{item.signature}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+
+<text bindtap="showDialogBtn" style="font-size: 24pt;" class="show-btn">
+</text>
+<!-- <button class="show-btn" bindtap="showDialogBtn"></button> -->
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">待审批</view>
+  <scroll-view scroll-y class="{{modalList.length>4?'modal_scroll':''}}">
+    <view style="margin: 10px;text-align: center;" wx:if="{{!modalList}}">暂无</view>
+    <view wx:for="{{modalList}}" wx:key="index" class="modal_member">
+      <view class="modal_left">
+        <view class="modal_info">
+          <image src="{{item.headImg}}" mode="" />
+          <text class="modal_info_name">{{item.name}}</text>
+        </view>
+        <text class="modal_reason">{{item.reason}}</text>
+      </view>
+      
+      <view class="modal_icon">
+        <image data-userid="{{item.id}}" bindtap="agreeOne" src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E5%90%8C%E6%84%8F.png" mode="" />
+        <image data-userid="{{item.id}}" bindtap="refuseOne" src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E6%8B%92%E7%BB%9D.png" mode="" />
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">全部拒绝</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">全部同意</view>
+  </view>
+</view>

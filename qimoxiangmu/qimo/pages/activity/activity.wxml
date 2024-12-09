@@ -1,0 +1,29 @@
+<!--  活动 -->
+<view class="search">
+  <van-icon name="http://ru857uat2.hn-bkt.clouddn.com/images/icon/loader.png" size="34px" />
+  <van-search custom-class="search_wid" use-action-slot value="{{ value }}" placeholder="请输入搜索关键词">
+    <view class="btn_search" slot="action" bindtap="toSearch">搜索</view>
+  </van-search>
+</view>
+<view class="ccc">
+  <!-- 活动列表 -->
+  <view wx:if="{{activityList.length!=0}}" data-clubid="{{item.clubId}}" data-actid="{{item.id}}" bindtap="toActivityIndex" class="activity-item" wx:for="{{activityList}}" wx:key="index">
+    <!-- 背景图片 -->
+    <view class="thumb">
+      <image src="{{item.images}}" mode="aspectFill" />
+    </view>
+    <!-- 具体信息 -->
+    <view class="info">
+      <text class="activity-title">{{item.name}}</text>
+      <!-- 处理两个图标 -->
+      <span class="first">
+        <image class="activity-time" src="http://ru857uat2.hn-bkt.clouddn.com/images/tab/time.png" mode=""></image>
+        <text>{{item.time}}</text>
+      </span>
+      <span class="second">
+        <image class="activity-name" src="http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E7%A4%BE%E5%8C%BA.png" mode="" />
+        <text>{{item.ClubName}}</text>
+      </span>
+    </view>
+  </view>
+</view>

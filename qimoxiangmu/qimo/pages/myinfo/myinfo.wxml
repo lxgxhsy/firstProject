@@ -1,0 +1,28 @@
+<!--pages/myinfo/myinfo.wxml-->
+<form bindsubmit="submit">
+  <view class="myinfo">
+    <van-cell-group inset>
+      <van-cell center title="头像" size="large">
+        <image bindtap="changehead" src="{{imgUrl}}" />
+      </van-cell>
+
+      <!--删掉 .van-field__label{color:var(--field-label-color,#646566)} -->
+      <!-- 目录：vant>weapp>field>index.wxss -->
+      <van-field value="{{ username }}" label="用户名" placeholder="请输入用户名" input-align="right" size="large" bindinput="changeName"/>
+      <van-field required value="{{ id }}" label="ID" readonly="true" input-align="right" size="large" />
+
+      <van-cell title="性别" input-align="right" size="large" is-link>
+        <picker bindchange="pickerChange" class="picker" range="{{picker.arr}}">{{picker.arr[picker.index]}}
+        </picker>
+      </van-cell>
+
+      <van-cell-group>
+        <van-field value="{{ message }}" label="个性签名" type="textarea" placeholder="该用户未编辑个性签名" autosize size="large" bindinput="introInput"/>
+      </van-cell-group>
+    </van-cell-group>
+  </view>
+
+  <view class="myinfo-button" bindtap="changeInfo">
+    <van-button type="primary" size="large">保存信息</van-button>
+  </view>
+</form>

@@ -1,0 +1,14 @@
+<!--pages/myclub/myclub.wxml-->
+<scroll-view scroll-y>
+  <view wx:for="{{clubList}}" wx:key="id">
+    <view data-id="{{item.id}}" class="myclub" bindtap="toClubIndex">
+      <image src="{{item.image}}" mode="" />
+      <text>{{item.clubName}}</text>
+    </view>
+  </view>
+
+  <view class="myclub_add" bindtap="addNewClub">
+    <image src="http://scdwjow71.hn-bkt.clouddn.com/images/club/addClub.png" mode="aspectFit" />
+    <text></text>
+  </view>
+</scroll-view>

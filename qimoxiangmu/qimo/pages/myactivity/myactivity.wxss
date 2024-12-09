@@ -1,0 +1,79 @@
+/* pages/myactivity/myactivity.wxss */
+page{
+  background-color: #e9ecef;
+}
+
+.myactivity{
+  margin: 12px 17px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.activity-item{
+  display: flex;
+  padding: 20rpx;
+  border: 1px solid #efefef;
+  margin:30rpx;
+  border-radius: 8rpx;
+  box-shadow: 1px 1px 15rpx #ddd;
+  }
+  .thumb image{
+    width: 320rpx;
+    height: 180rpx;
+    display: block;
+    margin-right: 20rpx;
+    border-radius: 4px;
+  }
+  .info{
+    display: flex;
+    flex-direction: column;
+    font-size: 24rpx;
+   justify-content: space-around;
+   /* text-align: center; */
+  }
+  
+  .activity-title{
+    font-weight: bold;
+    font-size: 30rpx;
+  }
+  .activity-icon{
+    width: 30rpx;
+    height: 30rpx;
+    margin-top:6rpx;
+  }
+  .activity-name{
+    width: 40rpx;
+    height: 40rpx;
+  }
+  .first > text{
+   margin-top: 6rpx;
+   margin-left: 5rpx;
+   align-content: center;
+  }
+  .second > text{
+    margin-top: 5rpx;
+    align-content: center;
+    margin-left: 5rpx;
+   }
+  .info > span{
+    height: 40rpx;
+    display: flex;
+  }
+
+  .show-btn {
+    bottom: 88rpx;
+    right: 50rpx;
+    position: fixed;
+    width: 100rpx;
+    height: 100rpx;
+    background-color: white;
+    border-radius: 50%;
+    background-size: 60% 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('http://ru857uat2.hn-bkt.clouddn.com/images/icon/%E5%8A%A0%E5%8F%B7.png');
+  }
+
